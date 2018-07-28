@@ -23,7 +23,7 @@ mongoose.connect(MONGODB_URI, function (err, db) {
   if (err) {
     console.log('Unable to connect to the mongoDB server. Error:', err);
   } else {
-    console.log('Connection established to', url);
+    console.log('Connection established to', MONGODB_URI);
   }
 });
 
