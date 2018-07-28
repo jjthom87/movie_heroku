@@ -4,9 +4,7 @@
   "description": "This project was bootstrapped with Create React App.",
   "main": "server.js",
   "scripts": {
-    "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
-    "start:prod": "node project3/server.js",
-    "start:dev": "cd project3 && npm start",
+    "start": "concurrently \"cd project3 && npm start\" \"PORT=5000 node project3/server.js\"",
     "client": "cd project3 && npm run start",
     "install": "cd project3 && npm install",
     "build": "cd project3 && npm run build",
